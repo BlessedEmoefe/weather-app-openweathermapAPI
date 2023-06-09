@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { FlexibleDiv } from "../flexibleDiv/flexibleDiv.component";
 import { Title } from "../typography/text.component";
 import { fontSizes } from "../../infrastructure/theme/fonts";
+import { colors } from "../../infrastructure/theme/colors";
 
 export const WeatherInformationContainer = styled(FlexibleDiv)`
   // background: green;
@@ -27,6 +28,12 @@ export const WeatherInformationInnerContainer = styled(FlexibleDiv)`
 
   @media only screen and (max-width: 800px) {
   }
+`;
+
+export const Temperature = styled(Title)`
+  color: #000;
+  font-size: ${fontSizes.h2};
+  color${colors.primary}
 `;
 
 export const Text = styled(Title)`

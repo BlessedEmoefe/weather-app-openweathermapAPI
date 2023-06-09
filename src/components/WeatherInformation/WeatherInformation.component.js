@@ -5,11 +5,13 @@ import {
   EmptyCard,
   EmptyCardImage,
   EmptyCardText,
+  Temperature,
   Text,
   WeatherImage,
 } from "./WeatherInformation.styles";
 import { Loader, PageLoader } from "../loaders/loaders.component";
 import Weather from "../../assets/weather.svg";
+import Weathers from '../../assets/Weathers.jpeg'
 
 const WeatherInformation = ({ weatherData, loading }) => {
   return (
@@ -25,20 +27,22 @@ const WeatherInformation = ({ weatherData, loading }) => {
         <WeatherInformationInnerContainer>
           {weatherData?.weather[0].icon && (
             <WeatherImage
-              src={`https://openweathermap.org/img/w/${weatherData?.weather[0].icon}.png`}
+              src={Weather}
               alt="weather image"
             />
           )}
-          <Text>Weather Description: {weatherData?.weather[0].description}</Text>
+          <Text>
+            Weather Description: {weatherData?.weather[0].description}
+          </Text>
           <Text>Timezone: {weatherData?.timezone}</Text>
           <Text>Location Name: {weatherData?.name}</Text>
           <Text>Longitude: {weatherData?.coord.lon} </Text>
           <Text>Latitude: {weatherData?.coord.lat} </Text>
 
-          <Text>Temperature: {weatherData?.main.temp}</Text>
+          <Temperature>Temperature: {weatherData?.main.temp}°C</Temperature>
           <Text>Pressure: {weatherData?.main.pressure}</Text>
-          <Text>Humidity: {weatherData?.main.humidity}</Text>
-          <Text>Wind Speed: {weatherData?.wind.speed}</Text>
+          <Text>Humidity: {weatherData?.main.humidity}%</Text>
+          <Text>Wind Speed: {weatherData?.wind.speed}km/h</Text>
         </WeatherInformationInnerContainer>
       )}
     </WeatherInformationContainer>

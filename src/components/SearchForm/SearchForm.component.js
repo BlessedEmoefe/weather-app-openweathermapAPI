@@ -19,7 +19,7 @@ const SearchForm = ({ getLocation, setWeatherData, setLoading }) => {
     try {
       let response = await axios
         .get(
-          `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${key}`
+          `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${location}&appid=${key}`
         )
         .then(({ data }) => {
           console.log("data", data);
