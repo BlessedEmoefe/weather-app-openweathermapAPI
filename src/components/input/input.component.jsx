@@ -78,6 +78,7 @@ const InputStyles = styled.input`
   flex:1;
   min-width:70%;
   font-size: ${({ fontSize }) => (fontSize ? fontSize : fontSizes.button)};
+  font-weight:500;
   outline: none;
 `;
 

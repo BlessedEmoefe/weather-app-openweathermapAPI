@@ -15,13 +15,5 @@ export const HomeContainer = styled(FlexibleDiv)`
   }
 `;
 export const Forms = styled.form`
-  padding: 0;
-  width:80%;
-  display:flex;
-  justify-content: center;
-  background:teal;
-  gap: 2rem;
-
-  @media only screen and (max-width: 800px) {
-  }
+ 
 `;
