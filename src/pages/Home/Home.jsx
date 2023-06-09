@@ -11,9 +11,9 @@ const Home = () => {
   const [weatherData, setWeatherData] = useState();
   const [location, setLocation] = useState("");
 
-  useEffect(()=>{
-setLoading("initialLoad")
-  },[])
+  useEffect(() => {
+    setLoading("initialLoad");
+  }, []);
 
   return (
     <HomeContainer>

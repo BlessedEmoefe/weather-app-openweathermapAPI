@@ -6,11 +6,11 @@ import { fontSizes } from "../../infrastructure/theme/fonts";
 export const HomeContainer = styled(FlexibleDiv)`
   padding: 0;
   /* background:red; */
-  flex-direction:column;
-  justify-content:flex-start;
-  min-height:100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
   gap: 2rem;
-
+  padding-bottom: 2rem;
   @media only screen and (max-width: 800px) {
   }
 `;
