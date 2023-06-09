@@ -34,9 +34,9 @@ export const Text = styled(Title)`
   font-size: ${fontSizes.body};
 `;
 export const WeatherImage = styled.img`
-  width: auto;
-  height: 250px;
-  background: blue;
+  width: 200px;
+  height: auto;
+  // background: blue;
 `;
 
 export const EmptyCard = styled(FlexibleDiv)`

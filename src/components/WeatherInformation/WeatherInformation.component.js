@@ -23,22 +23,22 @@ const WeatherInformation = ({ weatherData, loading }) => {
         <Loader />
       ) : (
         <WeatherInformationInnerContainer>
-          {weatherData?.weather.icon && (
+          {weatherData?.weather[0].icon && (
             <WeatherImage
-              src={`https://openweathermap.org/img/w/${weatherData?.weather.icon}.png`}
+              src={`https://openweathermap.org/img/w/${weatherData?.weather[0].icon}.png`}
               alt="weather image"
             />
           )}
-          <Text>{weatherData?.weather.description}</Text>
-          <Text> {weatherData?.timezone}</Text>
-          <Text> {weatherData?.name}</Text>
-          <Text> {weatherData?.coord.lon} </Text>
-          <Text> {weatherData?.coord.lat} </Text>
+          <Text>Weather Description: {weatherData?.weather[0].description}</Text>
+          <Text>Timezone: {weatherData?.timezone}</Text>
+          <Text>Location Name: {weatherData?.name}</Text>
+          <Text>Longitude: {weatherData?.coord.lon} </Text>
+          <Text>Latitude: {weatherData?.coord.lat} </Text>
 
-          <Text>{weatherData?.main.temp}</Text>
-          <Text>{weatherData?.main.pressure}</Text>
-          <Text>{weatherData?.main.humidity}</Text>
-          <Text>{weatherData?.wind.speed}</Text>
+          <Text>Temperature: {weatherData?.main.temp}</Text>
+          <Text>Pressure: {weatherData?.main.pressure}</Text>
+          <Text>Humidity: {weatherData?.main.humidity}</Text>
+          <Text>Wind Speed: {weatherData?.wind.speed}</Text>
         </WeatherInformationInnerContainer>
       )}
     </WeatherInformationContainer>
