@@ -11,42 +11,19 @@ const Home = () => {
   const [weatherData, setWeatherData] = useState();
   const [location, setLocation] = useState("");
 
-  // const getLocation = (location)=>{
-  //  setLocation(location)
-  // }
-  useEffect(() => {
-    setLoading(true);
-    const key = "f6cd2e6311267dff484fbe43264ea5be";
-    return async () => {
-      try {
-        let response = await axios
-          .get(
-            `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${key}`
-          )
-          .then(({ data }) => {
-            console.log("data", data);
-            setWeatherData(data);
-            console.log(location);
-          })
-          .then(() => {
-            setLoading(false);
-          });
-      } catch (err) {
-        console.log(err);
-      }
-    };
-  }, [location]);
-
-  useEffect(() => {
-    console.log("weatherData", weatherData);
-    // setLoading(true);
-  }, []);
+  useEffect(()=>{
+setLoading("initialLoad")
+  },[])
 
   return (
     <HomeContainer>
       <Header />
-      <SearchForm getLocation={setLocation} />
-      <WeatherInformation weatherData={weatherData} />
+      <SearchForm
+        getLocation={setLocation}
+        setLoading={setLoading}
+        setWeatherData={setWeatherData}
+      />
+      <WeatherInformation weatherData={weatherData} loading={loading} />
     </HomeContainer>
   );
 };
