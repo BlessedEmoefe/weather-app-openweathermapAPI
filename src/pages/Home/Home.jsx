@@ -13,7 +13,7 @@ const handleWeatherSearch =()=>{
   return (
     <HomeContainer>
       <Header />
-
+<p>Hello</p>
       <Forms>
         <Input
           width="50%"
